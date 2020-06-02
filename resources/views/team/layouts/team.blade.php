@@ -70,8 +70,8 @@
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">首页</a></li>
-								<li class="has-dropdown">
+								<li class="active"><a href="{{url('/')}}">首页</a></li>
+								<li class="has-dropdown navClick">
 									<a href="work.html">业务员管理</a>
 									<ul class="dropdown">
 										<li><a href="#">业务员添加</a></li>
@@ -79,10 +79,10 @@
 									</ul>
 								</li>
 								<li class="has-dropdown">
-									<a href="work.html">客户管理</a>
+									<a href="{{url('client')}}">客户管理</a>
 									<ul class="dropdown">
-										<li><a href="#">客户添加</a></li>
-										<li><a href="#">客户展示</a></li>
+										<li><a href="{{url('client/create')}}">客户添加</a></li>
+										<li><a href="{{url('client')}}">客户展示</a></li>
 									</ul>
 								</li>
 								<li class="has-dropdown">
@@ -99,6 +99,7 @@
 										<li><a href="#">管理员展示</a></li>
 									</ul>
 								</li>
+								<li><a href="services.html">综合查询</a></li>
 								
 								<li class="btn-cta"><a href="#">欢迎【】登录</a></li>
 								<li class="btn-cta"><a href="#">退出</a></li>
