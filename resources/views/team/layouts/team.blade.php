@@ -74,8 +74,8 @@
 								<li class="has-dropdown">
 									<a href="work.html">业务员管理</a>
 									<ul class="dropdown">
-										<li><a href="#">业务员添加</a></li>
-										<li><a href="#">业务员展示</a></li>
+										<li><a href="{{url('salesman/create')}}">业务员添加</a></li>
+										<li><a href="{{url('salesman/index')}}">业务员展示</a></li>
 									</ul>
 								</li>
 								<li class="has-dropdown">
@@ -88,8 +88,8 @@
 								<li class="has-dropdown">
 									<a href="work.html">拜访会议管理</a>
 									<ul class="dropdown">
-										<li><a href="#">添加拜访会议</a></li>
-										<li><a href="#">拜访会议展示</a></li>
+										<li><a href="{{url('meeting/create')}}">添加拜访会议</a></li>
+										<li><a href="{{url('meeting/index')}}">拜访会议展示</a></li>
 									</ul>
 								</li>
 								<li class="has-dropdown">
