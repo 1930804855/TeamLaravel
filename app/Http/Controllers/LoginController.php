@@ -9,9 +9,12 @@ use App\Admin;
 
 class LoginController extends Controller
 {
+    //登录页面
     public function index(){
         return view('team.login');
     }
+
+    //执行登录
     public function logindo(){
         $post = request()->except('_token');
 
@@ -32,7 +35,7 @@ class LoginController extends Controller
 
         session(['admin'=>$admin]);
 
-        return redirect('/admin/index');
+        return redirect('/');
     }
 
     /**退出登录 */

@@ -40,12 +40,13 @@ class SalesmanController extends Controller
     {
         $validatedData = $request->validate([ 
             's_name' => 'required|unique:salesman', 
-            's_tel' => 'required', 
-            's_tel' => 'regex:/^1[3456789]\d{9}$/',
+            's_sex'=>'required',
+            's_tel' => 'required|regex:/^1[3456789]\d{9}$/', 
             's_tels' => 'regex:/^1[3456789]\d{9}$/',
         ],[
             's_name.required' =>"业务员名称必填",
             's_name.unique' =>'业务员名称已存在',
+            's_sex.required'=>'性别必填',
             's_tel.required' =>'手机号必填',
             's_tel.regex' => '请正确填写手机号',
             's_tels.regex' => '请正确填写办公电话',

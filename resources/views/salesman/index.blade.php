@@ -1,7 +1,8 @@
 @extends('team.layouts.team')
 @section('title','业务员展示')
 @section('content')
-<center><h2>业务员列表</h2></br></center>
+<br>
+<center><h2>CRM管理系统-业务员列表</h2></br></center>
 <table class="table">
 	<thead>
 		<tr>

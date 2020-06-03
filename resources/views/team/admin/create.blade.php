@@ -1,12 +1,15 @@
 @extends('team.layouts.team')
 @section('title','管理员添加')
 @section('content')
-
+<br>
+<center>
+	<h1>CRM管理系统-管理员添加</h1>
+</center>
 <form class="form-horizontal" role="form" method="post" action="{{url('/admin/store')}}" enctype="multipart/form-data">
     @csrf
 	<div class="form-group">
 		<label for="firstname" class="col-sm-2 control-label">管理员名称</label>
-		<div class="col-sm-5">
+		<div class="col-sm-9">
 			<input type="text" class="form-control" name="admin_name" id="firstname" 
 				   placeholder="请输入管理员名称">
 				   <!-- 第二种验证方式 -->
@@ -15,7 +18,7 @@
 	</div>
 	<div class="form-group">
 		<label for="lastname" class="col-sm-2 control-label">管理员密码</label>
-		<div class="col-sm-5">
+		<div class="col-sm-9">
 			<input type="password" class="form-control" name="admin_pwd" id="lastname"
 			placeholder="请输入管理员密码">
 			<!-- 第二种验证方式 -->
@@ -24,7 +27,7 @@
 	</div>
     <div class="form-group">
 		<label for="firstname" class="col-sm-2 control-label">管理员角色</label>
-		<div class="col-sm-5">
+		<div class="col-sm-9">
 				<select name="r_id">
                     <option value="">--请选择--</option>
                     @foreach($rolesInfo as $k=>$v)

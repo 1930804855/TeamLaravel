@@ -1,7 +1,8 @@
 @extends('team.layouts.team')
 @section('title','业务员修改')
 @section('content')
-<center><h2>业务员修改</h2></br></center>
+<br>
+<center><h2>CRM管理系统-业务员修改</h2></br></center>
 <form class="form-horizontal" role="form" method="post" action="{{url('/salesman/update/'.$salesmanInfo->s_id)}}" enctype="multipart/form-data">
 	@csrf
 	<div class="form-group">

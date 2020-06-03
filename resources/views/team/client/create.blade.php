@@ -82,16 +82,4 @@
       </div>
     </div>
   </form>
-
-  <script type="text/javascript">
-      //客户名称失焦事件
-      $(document).on('blur','input[name="c_name"]',function(){
-          //获取值
-          var c_name=$(this).val()
-          //判断非空
-          if(!c_name){
-              $(this).next().text('客户名称不可为空，请填写。')
-          }
-      })
-  </script>
 @endsection

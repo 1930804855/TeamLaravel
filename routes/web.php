@@ -21,6 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/','team/index')->middleware('login');
 
+//登录页面
+Route::get('/login','LoginController@index');
+//执行登录
+Route::post('/logindo','LoginController@logindo');
+//退出登录
+Route::get('/loginout','LoginController@loginout')->middleware('login');
+
 /**管理员*/
 Route::prefix('admin')->middleware('login')->group(function(){
     Route::get('/index','Admin\AdminController@index');  //展示
@@ -31,12 +38,6 @@ Route::prefix('admin')->middleware('login')->group(function(){
     Route::get('destroy/{id}','Admin\AdminController@destroy');  //删除
 
 });
-
-   Route::get('/login','LoginController@index');
-   Route::post('/logindo','LoginController@logindo')->middleware('login');
-   Route::get('/loginout','LoginController@loginout')->middleware('login');
-
-
 
 //业务员
 Route::prefix('salesman')->middleware('login')->group(function () {

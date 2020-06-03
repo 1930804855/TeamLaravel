@@ -1,7 +1,8 @@
 @extends('team.layouts.team')
 @section('title','业务员添加')
 @section('content')
-<center><h2>业务员添加</h2></br></center>
+<br>
+<center><h2>CRM管理系统-业务员添加</h2></br></center>
 <form class="form-horizontal" role="form" method="post" action="{{url('/salesman/store')}}" enctype="multipart/form-data">
 	@csrf
 	<div class="form-group">
@@ -17,8 +18,8 @@
 		<div class="col-sm-10">
 			<input type="radio" name="s_sex" value="1">男
 			<input type="radio" name="s_sex" value="2">女
+			<b style="color:red">{{$errors->first('s_sex')}}</b>
 		</div>
-		<b style="color:red">{{$errors->first('s_sex')}}</b>
 	</div>
 	
 	

@@ -71,11 +71,56 @@
 						<div class="col-md-10 text-right menu-1">
 							<ul>
 								<li class="active"><a href="{{url('/')}}">首页</a></li>
+								@if(session('admin')->r_id==1)
 								<li class="has-dropdown navClick">
-									<a href="work.html">业务员管理</a>
+									<a href="{{url('salesman/index')}}">业务员管理</a>
 									<ul class="dropdown">
 										<li><a href="{{url('salesman/create')}}">业务员添加</a></li>
 										<li><a href="{{url('salesman/index')}}">业务员展示</a></li>
+									</ul>
+								</li>
+								<li class="has-dropdown">
+									<a href="{{url('client')}}">客户管理</a>
+									<ul class="dropdown">
+										<li><a href="{{url('client/create')}}">客户添加</a></li>
+										<li><a href="{{url('client')}}">客户展示</a></li>
+									</ul>
+								</li>
+								<li class="has-dropdown">
+									<a href="{{url('admin/index')}}">管理员管理</a>
+									<ul class="dropdown">
+										<li><a href="{{url('admin/create')}}">管理员添加</a></li>
+										<li><a href="{{url('admin/index')}}">管理员展示</a></li>
+									</ul>
+								</li>
+								@elseif(session('admin')->r_id==2)
+								<li class="has-dropdown">
+									<a href="work.html">管理员管理</a>
+									<ul class="dropdown">
+										<li><a href="{{url('admin/create')}}">管理员添加</a></li>
+										<li><a href="{{url('admin/index')}}">管理员展示</a></li>
+									</ul>
+								</li>
+								<li class="has-dropdown">
+									<a href="{{url('client')}}">客户管理</a>
+									<ul class="dropdown">
+										<li><a href="{{url('client/create')}}">客户添加</a></li>
+										<li><a href="{{url('client')}}">客户展示</a></li>
+									</ul>
+								</li>
+								<li class="has-dropdown">
+									<a href="{{url('demand')}}">综合查询</a>
+									<ul class="dropdown">
+										<li><a href="{{url('demand')}}">客户信息查询</a></li>
+										<li><a href="{{url('demand/meeting')}}">客户拜访记录查询</a></li>
+									</ul>
+								</li>
+								@elseif(session('admin')->r_id==3)
+								<li class="has-dropdown">
+									<a href="work.html">管理员管理</a>
+									<ul class="dropdown">
+										<li><a href="{{url('admin/create')}}">管理员添加</a></li>
+										<li><a href="{{url('admin/index')}}">管理员展示</a></li>
 									</ul>
 								</li>
 								<li class="has-dropdown">
@@ -92,22 +137,10 @@
 										<li><a href="{{url('meeting/index')}}">拜访会议展示</a></li>
 									</ul>
 								</li>
-								<li class="has-dropdown">
-									<a href="work.html">管理员管理</a>
-									<ul class="dropdown">
-										<li><a href="{{url('admin/create')}}">管理员添加</a></li>
-										<li><a href="{{url('admin/index')}}">管理员展示</a></li>
-									</ul>
-								</li>
-								<li class="has-dropdown">
-									<a href="{{url('demand')}}">综合查询</a>
-									<ul class="dropdown">
-										<li><a href="{{url('demand')}}">客户信息查询</a></li>
-										<li><a href="{{url('demand/meeting')}}">客户拜访记录查询</a></li>
-									</ul>
-								</li>
+								@endif
 								
-								<li class="btn-cta"><a>欢迎【{{session('admin')->admin_name}}】登录</a></li>
+								<li class="btn-cta"><a>欢迎【<b style="color: #9F35FF">{{session('admin')->admin_name}}</b>】登录</a></li>
+								<li class="btn-cta"><a>当前登录身份是：<i style="color: #9F35FF">@if(session('admin')->r_id==1)系统管理员@elseif(session('admin')->r_id==2)主管@elseif(session('admin')->r_id==3)业务员@endif</i></a></li>
 								<li class="btn-cta"><a href="{{url('/loginout')}}">退出</a></li>
 							</ul>
 						</div>
