@@ -95,13 +95,13 @@
 								<li class="has-dropdown">
 									<a href="work.html">管理员管理</a>
 									<ul class="dropdown">
-										<li><a href="#">管理员添加</a></li>
-										<li><a href="#">管理员展示</a></li>
+										<li><a href="{{url('admin/create')}}">管理员添加</a></li>
+										<li><a href="{{url('admin/index')}}">管理员展示</a></li>
 									</ul>
 								</li>
 								
-								<li class="btn-cta"><a href="#">欢迎【】登录</a></li>
-								<li class="btn-cta"><a href="#">退出</a></li>
+								<li class="btn-cta"><a>欢迎【{{session('admin')->admin_name}}】登录</a></li>
+								<li class="btn-cta"><a href="{{url('/loginout')}}">退出</a></li>
 							</ul>
 						</div>
 					</div>
