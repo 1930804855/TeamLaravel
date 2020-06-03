@@ -54,7 +54,7 @@
 	<![endif]-->
 	<!-- jQuery -->
 	<script src="/static/js/jquery.min.js"></script>
-
+	
 	</head>
 	<body>
 		
@@ -99,7 +99,13 @@
 										<li><a href="#">管理员展示</a></li>
 									</ul>
 								</li>
-								<li><a href="services.html">综合查询</a></li>
+								<li class="has-dropdown">
+									<a href="{{url('demand')}}">综合查询</a>
+									<ul class="dropdown">
+										<li><a href="{{url('demand')}}">客户信息查询</a></li>
+										<li><a href="{{url('demand/meeting')}}">客户拜访记录查询</a></li>
+									</ul>
+								</li>
 								
 								<li class="btn-cta"><a href="#">欢迎【】登录</a></li>
 								<li class="btn-cta"><a href="#">退出</a></li>

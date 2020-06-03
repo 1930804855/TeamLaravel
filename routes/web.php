@@ -35,3 +35,11 @@ Route::prefix('client')->group(function(){
 	//删除
 	Route::get('destroy/{id}','ClientController@destroy');
 });
+
+//综合查询
+Route::prefix('demand')->group(function(){
+	//客户信息查询
+	Route::get('/','DemandController@client');
+	//拜访会议查询
+	Route::get('meeting','DemandController@meeting');
+});
